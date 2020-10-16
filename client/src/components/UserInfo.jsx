@@ -14,32 +14,35 @@ class UserInfo extends React.Component{
         }
     }
     confirmOrder(){
-      var name= $("#name").val()
+      var user= $("#name").val()
       var add= $("#adress").val()
       var number=$("#number").val()
       var str=""
-
-      this.props.order.map(item=>{str+=item+","})
-      if((name.length>0) && (add.length>0) && (number.length>0)){ 
-          
-      this.setState({
-          fullName:name,
-          adress:add ,
-          ordredFood:str.replace(/,\s*$/, "") ,
-          total:this.state.total,        // askkkkkkkkkkkkkkkkkkk ousema
+     this.props.order.map(item=>{str+=item+","})
+  
+     this.setState({fullName:user,
+        adress:add ,
+         ordredFood:str.replace(/,\s*$/, "") ,
+         total:this.props.total,
           phone:JSON.parse(number)
         })
-          Axios({
-          method:"Post",
-          url:"api/order"
-      })
+   
+
+      if((user.length>0) && (add.length>0) && (number.length>0)){ 
+        let name = this.state.fullName;
+        let adress = this.state.adress;
+        let phone = this.state.phone;
+        let total = this.state.total;
+        let ordredFood = this.state.ordredFood;
+          
+       Axios.post('api/order',{name,adress,phone,total,ordredFood})
           .then(response=>{
-              response=this.state
               console.log(response)
           })
           .catch(err=>{throw err})
       }
     }
+
 
 render(){
     return(
