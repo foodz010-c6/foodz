@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const db = require('../database');
+const db = require("../database");
 
 const app = express();
 const PORT = 3000;
@@ -12,9 +12,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/../client/dist"));
 
 app.get("/api/menu", (req, res) => {
-   db.getMenu(function(result){
-       res.send(result)
-   })
+  db.getMenu(function (result) {
+    res.send(result);
+  });
+});
+
+app.post("/api/userinfo", (req, res) => {
+  db.insertData(function (result) {
+    console.log(result);
+  });
 });
 
 app.listen(PORT, () => {
