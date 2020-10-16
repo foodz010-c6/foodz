@@ -13,14 +13,15 @@ const connection = mysql.createConnection(mysqlConfig);
 // };
 
 const getMenu = function (callback) {
-   var str="SELECT * FROM menu"
-   connection.query(str,function(err,result){
-       if(err){
-           throw err
-       }
-       callback(result)
-   })
+  var str = "SELECT * FROM menu";
+  connection.query(str, function (err, result) {
+    if (err) {
+      throw err;
+    }
+    callback(result);
+  });
 };
+
 
 module.exports = {
   getMenu,
