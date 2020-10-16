@@ -1,12 +1,12 @@
 import React from "react"
 import ReactDOM from 'react-dom';
 import Axios from "axios";
-import $ from "jquery"
+
 import Menu from "./components/Menu.jsx";
 
 class App extends React.Component{
    constructor(props){
-       super(props)
+       super(props);
        this.state={
           menu :[],
        
@@ -25,21 +25,14 @@ class App extends React.Component{
          })
          .catch(err=>{throw err})
    }
- 
- 
     render(){
-       
-        return(
-          
+        return( 
         <div >
             <Menu menu={this.state.menu} />
             
-          
         </div>
-        
               )
-            }
+    }
 
 }
-
 ReactDOM.render(<App />, document.getElementById('app'));

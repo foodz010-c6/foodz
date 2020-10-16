@@ -1,6 +1,6 @@
 import React from "react"
 import Axios from "axios"
-import  $ from "jquery"
+import $ from "jquery"
 class UserInfo extends React.Component{
     constructor(props){
         super(props)
@@ -39,7 +39,6 @@ class UserInfo extends React.Component{
       
      
     }
-
 render(){
  console.log(this.state)
     return(
@@ -55,6 +54,5 @@ render(){
         </div>
     )
 }
-
 }
-export default UserInfo
+export default UserInfo;
