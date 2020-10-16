@@ -16,6 +16,10 @@ app.get("/api/menu", (req, res) => {
        res.send(result)
    })
 });
+app.post("/api/order", (req, res) => {
+     res.json(req.body)
+ 
+});
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
