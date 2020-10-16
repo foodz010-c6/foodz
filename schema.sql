@@ -17,7 +17,6 @@ CREATE TABLE IF NOT EXISTS foodz.order (
     userName VARCHAR(255),
     adress VARCHAR(255),
     phoneNumber int,
-    wayOfPayment VARCHAR(255),
     PRIMARY KEY (id)
 );
 
