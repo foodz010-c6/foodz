@@ -1,6 +1,5 @@
 import React from "react"
 import Axios from "axios"
-import  $ from "jquery"
 class UserInfo extends React.Component{
     constructor(props){
         super(props)
@@ -14,9 +13,7 @@ class UserInfo extends React.Component{
         }
     }
     confirmOrder(){
-       
     }
-
 render(){
     return(
         <div>
@@ -31,6 +28,5 @@ render(){
         </div>
     )
 }
-
 }
-export default UserInfo
+export default UserInfo;
