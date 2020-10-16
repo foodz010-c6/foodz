@@ -1,13 +1,13 @@
  import React from 'react'
  import UserInfo from "./UserInfo.jsx"
-
+ import Axios from "axios";
  class Menu extends React.Component{
     constructor(props){
         super(props)
         this.state={
           Food:[],
           total:0,
-          
+          menu :[]
  
         }
     }
@@ -18,8 +18,6 @@
       var cost=0
       
       for( var i = 0; i < items.length; i++ ){
-        // console.log(items[i].name)
-        // console.log(items[i].value)
         if(items[i].checked){
           arr.push(items[i].name)
           cost+= JSON.parse(items[i].value)
@@ -28,6 +26,19 @@
     this.setState({ Food:arr, total:cost })
    
     }
+    componentDidMount(){
+      const settings={
+        method:"GET",
+        url:"/api/menu"
+      }
+      Axios(settings)
+       .then(response =>{
+         this.setState({
+           menu :response.data
+         })
+       })
+       .catch(err=>{throw err})
+ }
     
 
   
@@ -41,7 +52,7 @@
       } else{
         return(
           <div id="container" >
-                  {this.props.menu.map(item => (
+                  {this.state.menu.map(item => (
             <div key={item.id}>
                  <h4>{item.food} {item.price}</h4>
                  <input  type="checkbox" value={item.price} name={item.food}></input> 

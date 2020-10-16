@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS menu (
 CREATE TABLE IF NOT EXISTS foodz.order (
     id int AUTO_INCREMENT,
     orderedFood VARCHAR(255),
-    total int,
+    total int, 
     userName VARCHAR(255),
     adress VARCHAR(255),
     phoneNumber int,
