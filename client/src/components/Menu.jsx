@@ -6,7 +6,7 @@
         this.state={
           Food:[],
           total:0,
-          next:false
+          
  
         }
         
@@ -26,7 +26,7 @@
     }
    
     }
-    this.setState({ Food:arr, total:cost , next: !this.state.next})
+    this.setState({ Food:arr, total:cost })
 
   }
    
@@ -34,7 +34,7 @@
   
      render(){
        
-      if(this.state.next===true){
+      if(this.state.total>0){
         return <UserInfo  total={this.state.total} order={this.state.Food}/>
       } else{
         return(
