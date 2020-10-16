@@ -31,7 +31,7 @@
          <div id="container" >
              {this.props.menu.map(item => (
                 <div key={item.id}>
-          <h4 id="title" > {item.food} <div> {"  "}</div>   <strong id="price">Price: </strong> { item.price}</h4>
+          <h4 id="title" > {item.food} <div> </div>   <strong id="price">Price: </strong> { item.price}</h4>
           <input id="checkmark" type="checkbox" value={item.price} name={item.food}></input>
           </div>
         ))}
