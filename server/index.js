@@ -19,9 +19,16 @@ app.get("/api/menu", (req, res) => {
 
 
 app.post("/api/order", (req, res) => {
-     res.json(req.body)
- 
+  let data =req.body
+  db.saveOrder(data,function (err,result) {
+    console.log(data)
+    if(err)console.log(err)
+    res.send(result);
+  });
 });
+     
+ 
+
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
