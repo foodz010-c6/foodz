@@ -1,7 +1,6 @@
 import React from "react"
 import ReactDOM from 'react-dom';
 import Axios from "axios";
-
 import Menu from "./components/Menu.jsx";
 
 class App extends React.Component{
@@ -29,10 +28,9 @@ class App extends React.Component{
         return( 
         <div >
             <Menu menu={this.state.menu} />
-            
         </div>
               )
     }
 
-}
+  }
 ReactDOM.render(<App />, document.getElementById('app'));

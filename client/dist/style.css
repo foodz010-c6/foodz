@@ -12,6 +12,20 @@
   box-sizing: border-box;
   text-shadow: 2px 2px 5px red;
 }
+#passWord{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-shadow: 2px 2px 5px red;
+}
+#email{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-shadow: 2px 2px 5px red;
+}
 #number{
   width: 100%;
   padding: 12px 20px;

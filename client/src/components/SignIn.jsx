@@ -2,7 +2,7 @@ import React from 'react'
 import $ from "jquery"
 
 
-class LogIn extends React.Component{
+class SigIn extends React.Component{
     constructor(props){
         super(props);
 
@@ -10,11 +10,10 @@ class LogIn extends React.Component{
         this.state={
             EmailAdress:"",
             passWord:"",
-            logInData:[{}]
+            signInData:[{}]
+            
         }
     }
-
-
      confirmOrder(){
       var email= $("#email").val()
       var pass= $("#passWord").val()
@@ -22,24 +21,25 @@ class LogIn extends React.Component{
      this.setState({
          EmailAdress:email,
          passWord:pass,
-         logInData: {email,pass}
+         signInData: {email,pass}
         })
+   
     }
 
     render(){
-           console.log(this.state.logInData)
+           console.log(this.state.signInData)
     return(
         <div>
-            <div  className="order" ><strong className="title">Log In : </strong>{this.props.total}</div>
+            <div  className="order" ><strong className="title">Sign In : </strong>{this.props.total}</div>
             <div className="inputs">
             <input type="text" placeholder="please enter your E-mail" id="email" required></input><br />
             <input type="text" placeholder="please enter your passWord" id="passWord" required></input>
             </div>
-            <button className="button" onClick={this.confirmOrder}>Log In </button>
+            <button className="button" onClick={this.confirmOrder}>Sign In </button>
         </div>
     )}
 
 }
-export default LogIn;
+export default SigIn;
 
 

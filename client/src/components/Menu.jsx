@@ -14,7 +14,7 @@
       var items = con.getElementsByTagName('input');
       var arr=[]
       var cost=0
-      
+
       for( var i = 0; i < items.length; i++ ){
         if(items[i].checked){
           arr.push(items[i].name)

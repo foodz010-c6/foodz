@@ -2,6 +2,7 @@ import React from "react"
 import Axios from "axios"
 import $ from "jquery"
 
+
 class UserInfo extends React.Component{
     constructor(props){
         super(props)
@@ -13,6 +14,7 @@ class UserInfo extends React.Component{
             phone:0,
         }
     }
+
     confirmOrder(){
       var user= $("#name").val()
       var add= $("#adress").val()
@@ -26,7 +28,6 @@ class UserInfo extends React.Component{
          total:this.props.total,
           phone:JSON.parse(number)
         })
-   
 
       if((user.length>0) && (add.length>0) && (number.length>0)){ 
         let name = this.state.fullName;
