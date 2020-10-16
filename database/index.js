@@ -21,8 +21,6 @@ const getMenu = function (callback) {
     callback(result);
   });
 };
-
-
 module.exports = {
   getMenu,
   // saveOrder

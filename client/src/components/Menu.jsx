@@ -7,8 +7,6 @@
         this.state={
           Food:[],
           total:0,
-          
- 
         }
     }
     checkboxes(){
@@ -18,41 +16,32 @@
       var cost=0
       
       for( var i = 0; i < items.length; i++ ){
-        // console.log(items[i].name)
-        // console.log(items[i].value)
         if(items[i].checked){
           arr.push(items[i].name)
           cost+= JSON.parse(items[i].value)
         }
       }
     this.setState({ Food:arr, total:cost })
-   
     }
-    
-
-  
-   
-   
-  
      render(){
-       
       if(this.state.total>0){
         return <UserInfo  total={this.state.total} order={this.state.Food}/>
       } else{
         return(
           <div id="container" >
+              <h1>WELCOME TO FOOD'ZZ </h1>
                   {this.props.menu.map(item => (
             <div key={item.id}>
-                 <h4>{item.food} {item.price}</h4>
-                 <input id="checkmark" type="checkbox" value={item.price} name={item.food}></input> 
+                 <h4 id="maintitle"><div id="fooditem">{item.food}</div>  <div><strong className="title"> Price:</strong></div>  <strong id="price">  {item.price}</strong></h4>
+                 <input id="checkmark" type="checkbox" value={item.price}  name={item.food}></input> 
             </div>
          ))}
             <div>
-                   <button onClick={this.checkboxes.bind(this) }>submit</button>
+                   <button className="button" onClick={this.checkboxes.bind(this) }>submit</button>
             </div>
-          </div> )
+          </div> 
+          )
       }
-      
     }
  }
 export default Menu;
