@@ -17,10 +17,10 @@ app.get("/api/menu", (req, res) => {
   });
 });
 
-app.post("/api/userinfo", (req, res) => {
-  db.insertData(function (result) {
-    console.log(result);
-  });
+
+app.post("/api/order", (req, res) => {
+     res.json(req.body)
+ 
 });
 
 app.listen(PORT, () => {
