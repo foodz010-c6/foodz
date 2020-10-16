@@ -1,11 +1,12 @@
  import React from 'react'
- 
+ import UserInfo from "./UserInfo.jsx"
  class Menu extends React.Component{
     constructor(props){
         super(props)
         this.state={
-          ordredFood:[],
-          total:0
+          Food:[],
+          total:0,
+          next:false
  
         }
         
@@ -25,31 +26,38 @@
     }
    
     }
-    this.setState({ordredFood:arr,total:cost})
+    this.setState({ Food:arr, total:cost , next: !this.state.next})
 
   }
    
    
   
      render(){
-      console.log(this.state)
-         return(
+       
+      if(this.state.next===true){
+        return <UserInfo  total={this.state.total} order={this.state.Food}/>
+      } else{
+        return(
           
-         <div id="container" >
-                 {this.props.menu.map(item => (
-                     <div key={item.id}>
-          <h4  >{item.food} {item.price}</h4>
-           <input type="checkbox" value={item.price} name={item.food}></input>
-           
+          <div id="container" >
+                  {this.props.menu.map(item => (
+                      <div key={item.id}>
+           <h4  >{item.food} {item.price}</h4>
+            <input type="checkbox" value={item.price} name={item.food}></input>
+            
+           </div>
+ 
+         ))}
+               <div>
+                   <button onClick={this.checkboxes.bind(this) }>submit</button>
+             </div>
           </div>
+          
+                )
 
-        ))}
-              <div>
-                  <button onClick={this.checkboxes.bind(this) }>submit</button>
-            </div>
-         </div>
-         
-               )
+      }
+      
+        
              }
  
  }
