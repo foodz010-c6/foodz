@@ -1,12 +1,15 @@
  import React from 'react'
  import UserInfo from "./UserInfo.jsx"
-
+ import Axios from "axios";
+ 
  class Menu extends React.Component{
     constructor(props){
         super(props)
         this.state={
           Food:[],
           total:0,
+          menu :[]
+ 
         }
     }
     checkboxes(){
@@ -23,6 +26,25 @@
       }
     this.setState({ Food:arr, total:cost })
     }
+    componentDidMount(){
+      const settings={
+        method:"GET",
+        url:"/api/menu"
+      }
+      Axios(settings)
+       .then(response =>{
+         this.setState({
+           menu :response.data
+         })
+       })
+       .catch(err=>{throw err})
+ }
+    
+
+  
+   
+   
+  
      render(){
       if(this.state.total>0){
         return <UserInfo  total={this.state.total} order={this.state.Food}/>
@@ -30,7 +52,7 @@
         return(
           <div id="container" >
               <h1>WELCOME TO FOOD'ZZ </h1>
-                  {this.props.menu.map(item => (
+                  {this.state.menu.map(item => (
             <div key={item.id}>
                  <h4 id="maintitle"><div id="fooditem">{item.food}</div>  <div><strong className="title"> Price:</strong></div>  <strong id="price">  {item.price}</strong></h4>
                  <input id="checkmark" type="checkbox" value={item.price}  name={item.food}></input> 
