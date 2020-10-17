@@ -10,10 +10,19 @@ CREATE TABLE IF NOT EXISTS menu (
 );
 
 
+CREATE TABLE IF NOT EXISTS foodz.user (
+    id int AUTO_INCREMENT,
+    userName VARCHAR(255),
+    email VARCHAR(255) ,
+    mdp VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+
 CREATE TABLE IF NOT EXISTS foodz.order (
     id int AUTO_INCREMENT,
     orderedFood VARCHAR(255),
-    total int,
+    total int, 
     userName VARCHAR(255),
     adress VARCHAR(255),
     phoneNumber int,
@@ -34,4 +43,6 @@ INSERT into menu ( food,price) VALUES ("Fruit Salad",10000);
 INSERT into menu ( food,price) VALUES ("Grilled Chicken",32000);
 INSERT into menu ( food,price) VALUES ("Grilled Fish",20000);
 INSERT into menu ( food,price) VALUES ("Grilled Steak",18000);
+
+
 

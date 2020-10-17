@@ -80,11 +80,7 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-<<<<<<< HEAD
-=======
-
->>>>>>> 551c038cf8f1481a3966d27fd353c069f16647ea
-
+/client/dist/bundle.js
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and *not* Next.js
