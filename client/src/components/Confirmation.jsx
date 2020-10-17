@@ -8,7 +8,6 @@ class Confirmation extends React.Component{
         this.handleClick =this.handleClick.bind(this);
            
     }
-   
       handleClick(){
           
           let name = this.props.name;
