@@ -34,18 +34,19 @@ class App extends React.Component{
      var name=$("#name").val()
      var mail=$("#mail").val()
      var mdp=$("#mdp").val()
-     if((name.length>3)&&(mail.length>3)&&(mdp.length>3)){
-      this.state.users.map(user=>{
-        if((user.userName===name)&&(user.email===mail)&&(user.mdp===mdp)){
-          alert("Welcome")
-          this.setState({loggedIn:!this.state.loggedIn})
-        }else{
-          alert("No such user")
-          this.setState({count:this.state.count+1})
-        }
-      })
-
-     }  
+     if(this.state.users.length===0){
+       this.setState({ count:this.state.count+1 })
+      alert("No such user!")
+     }else{
+       this.state.users.map(user=>{if((user.userName===name)&&(user.email===mail)&&(user.mdp===mdp)){
+         alert("Welcome!")
+         this.setState({ loggedIn:!this.state.loggedIn })
+       } else{
+        alert("No such user!")
+        this.setState({ count:this.state.count+1 })
+       }
+     })   
+    }   
    }
     render(){
       console.log(this.state)

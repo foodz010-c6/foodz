@@ -7,6 +7,7 @@ class SignUp extends React.Component{
    constructor(props){
        super(props);
        this.state={
+        
           loggedIn:false
           
           
@@ -18,12 +19,13 @@ class SignUp extends React.Component{
    signUp(){
     let user=this.state.user
     let email=this.state.email
-    var mdp=this.state.mdp
+    var mdp=this.state.password
  Axios.post("/api/signup",{user,email,mdp})
  .then(response=>{
    console.log(response)
 })
 .catch(err=>{throw err})
+this.setState({loggedIn:!this.state.loggedIn})
 }
    
    
