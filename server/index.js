@@ -16,6 +16,11 @@ app.get("/api/menu", (req, res) => {
     res.send(result);
   });
 });
+app.get("/api/logIn", (req, res) => {
+  db.getUsers(function (result) {
+    res.send(result);
+  });
+});
 
 
 app.post("/api/order", (req, res) => {
@@ -27,6 +32,14 @@ app.post("/api/order", (req, res) => {
   });
 });
      
+app.post("/api/signup", (req, res) => {
+  let data =req.body
+  db.saveUser(data,function (err,result) {
+    console.log(data)
+    if(err)console.log(err)
+    res.send(result);
+  });
+});
  
 
 

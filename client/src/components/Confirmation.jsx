@@ -16,7 +16,6 @@ class Confirmation extends React.Component{
           let ordredFood = this.props.items;
           Axios.post("/api/order",{name,adress,phone,total,ordredFood})
           .then(response=>{
-            response=this.state
             console.log(response)
         })
         .catch(err=>{throw err})
