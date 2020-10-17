@@ -33,7 +33,7 @@ render(){
             <li>Phone Number :{this.props.num}</li>
             <li>Items Ordered :{this.props.items}</li>
             <li>Total :{this.props.total}</li>
-            <h2>Dear Client thank you for your order we guarantee a great service and high quality food  </h2>
+            <h2>Dear Client we guarantee a great service and high quality food you're order will be delivered in no time we'll contact u,Thank you hopefully we see you again!  </h2>
             <button onClick={this.handleClick.bind(this)}>Click to Confirm!</button>
           
         </div>
