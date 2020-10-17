@@ -39,12 +39,6 @@
        })
        .catch(err=>{throw err})
  }
-    
-
-  
-   
-   
-  
      render(){
       if(this.state.total>0){
         return <UserInfo  total={this.state.total} order={this.state.Food}/>
@@ -54,7 +48,7 @@
               <h1>WELCOME TO FOOD'ZZ </h1>
                   {this.state.menu.map(item => (
             <div key={item.id}>
-                 <h4 id="maintitle"><div id="fooditem">{item.food}</div>  <div><strong className="title"> Price:</strong></div>  <strong id="price">  {item.price}</strong></h4>
+                 <h4 className="maintitle"><div id="fooditem">{item.food}</div>  <div><strong className="title"> Price:</strong></div>  <strong id="price">  {item.price}</strong></h4>
                  <input id="checkmark" type="checkbox" value={item.price}  name={item.food}></input> 
             </div>
          ))}

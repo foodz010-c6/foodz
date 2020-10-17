@@ -11,7 +11,6 @@ class SigIn extends React.Component{
             EmailAdress:"",
             passWord:"",
             signInData:[{}]
-            
         }
     }
      confirmOrder(){
@@ -23,7 +22,6 @@ class SigIn extends React.Component{
          passWord:pass,
          signInData: {email,pass}
         })
-   
     }
 
     render(){

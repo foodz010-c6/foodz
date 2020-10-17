@@ -16,8 +16,6 @@ app.get("/api/menu", (req, res) => {
     res.send(result);
   });
 });
-
-
 app.post("/api/order", (req, res) => {
   let data =req.body
   db.saveOrder(data,function (err,result) {
@@ -26,10 +24,6 @@ app.post("/api/order", (req, res) => {
     res.send(result);
   });
 });
-     
- 
-
-
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });

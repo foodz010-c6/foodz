@@ -61,15 +61,18 @@ h1 {
 #confirmation{
     text-align: center;
   color:white;
-  font-size: 60px;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px red;
 }
 #price{
 font-size:30px;
 text-shadow: 2px 2px 5px red;
 }
-#maintitle{
+.maintitle{
+  font-size: 20px;
     color: white ;
     font-style: italic;
+    text-shadow: 2px 2px 5px red;
 }
 #fooditem{
     font-size:50px;

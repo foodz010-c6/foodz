@@ -13,8 +13,6 @@ class LogIn extends React.Component{
             logInData:[{}]
         }
     }
-
-
      confirmOrder(){
       var email= $("#email").val()
       var pass= $("#passWord").val()
@@ -25,7 +23,6 @@ class LogIn extends React.Component{
          logInData: {email,pass}
         })
     }
-
     render(){
            console.log(this.state.logInData)
     return(
