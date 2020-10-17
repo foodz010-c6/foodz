@@ -38,8 +38,6 @@ const saveOrder = function (data, callback) {
 
 
 
-
-
 const getMenu = function (callback) {
   var str = "SELECT * FROM menu";
   connection.query(str, function (err, result) {
@@ -49,12 +47,6 @@ const getMenu = function (callback) {
     callback(result);
   });
 };
-
-
-
-
-
-
 
 module.exports = {
   getMenu,
