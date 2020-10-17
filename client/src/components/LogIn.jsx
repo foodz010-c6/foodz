@@ -1,6 +1,5 @@
 import React from 'react'
 import $ from "jquery"
-import SignUp from './components/SingUp.jsx';
 
 
 class LogIn extends React.Component{
