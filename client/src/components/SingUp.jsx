@@ -48,7 +48,7 @@ this.setState({loggedIn:!this.state.loggedIn})
           <input type="text" placeholder="Enter your E-mail " name="email" onChange={this.handleChange}></input>
           <h2>Password :</h2>
           <input type="password" placeholder="Enter your password" name="password" onChange={this.handleChange}></input> <br></br>
-          <button onClick={this.signUp}>Sign up</button>
+          <button className="button" onClick={this.signUp}>Sign up</button>
           </div>
          
               )}
