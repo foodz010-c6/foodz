@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Axios from "axios";
 import $ from "jquery";
 import Menu from "./components/Menu.jsx";
-import SingUp from "./components/SingUp.jsx";
+import SignUp from "./components/SignUp.jsx";
 class App extends React.Component{
    constructor(props){
        super(props);
@@ -52,7 +52,7 @@ class App extends React.Component{
       if(this.state.loggedIn){
         return <Menu/>
       }else if(this.state.count===3){
-        return <SingUp/>
+        return <SignUp/>
       }else{
         return( 
           <div> 
@@ -63,7 +63,7 @@ class App extends React.Component{
           <input type="text" placeholder="Enter your E-mail " id="mail"></input>
           <h2>Password :</h2>
           <input type="password" placeholder="Enter your password" id="mdp" ></input> <br></br>
-          <button onClick={this.handleClick.bind(this)}>Log in</button>
+          <button onClick={this.handleClick.bind(this)} className="button">Log in</button>
           </div>
          
               )
