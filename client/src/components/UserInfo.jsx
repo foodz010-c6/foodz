@@ -1,9 +1,13 @@
-import React from "react"
-import $ from "jquery"
-import Confirmation from "./Confirmation.jsx"
+import React from "react";
+import $ from "jquery";
+import Confirmation from "./Confirmation.jsx";
+
 class UserInfo extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
+        
+        this.infoSubmit =this.infoSubmit.bind(this);
+
         this.state={
             ordredFood:"",
             total:0,
@@ -26,25 +30,23 @@ class UserInfo extends React.Component{
         }else{
             alert("Please fill out the Form!")
         }
-  
-
-      }
-      
-     
-    
+      } 
 render(){
 console.log(this.state)
      if(this.state.next){
-         return <Confirmation items={this.state.ordredFood} total={this.state.total} name={this.state.fullName} add={this.state.adress} num={this.state.phone} />
-     }
 
+       return <Confirmation items={this.state.ordredFood} total={this.state.total} name={this.state.fullName} add={this.state.adress} num={this.state.phone} />   
+     }
+     
     return(
-        <div>
-           
+        <div >   
+            <label className="maintitle">Full Name : </label>
             <input type="text" placeholder="please enter your fullname" id="name" required></input>
+              <label className="maintitle">Address : </label>
             <input type="text" placeholder="please enter your adress" id="adress" required></input>
+              <label className="maintitle">Phone Number : </label>
             <input type="value" placeholder="please enter your number" id="number" required></input>
-            <button onClick={this.infoSubmit.bind(this)}>Submit your info</button>
+            <button className="button" onClick={this.infoSubmit}>Submit your info</button>
           
         </div>
     )

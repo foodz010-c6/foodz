@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import Axios from "axios";
 import $ from "jquery";
 import Menu from "./components/Menu.jsx";
-import SingUp from "./components/SingUp.jsx"
-
+import SingUp from "./components/SingUp.jsx";
 class App extends React.Component{
    constructor(props){
        super(props);
@@ -48,7 +47,6 @@ class App extends React.Component{
      })   
     }   
    }
-  
     render(){
       console.log(this.state)
       if(this.state.loggedIn){
@@ -69,10 +67,8 @@ class App extends React.Component{
           </div>
          
               )
-      }
-       
+      } 
     }
-
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
