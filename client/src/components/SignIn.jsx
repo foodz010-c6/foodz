@@ -23,7 +23,6 @@ class SigIn extends React.Component{
          signInData: {email,pass}
         })
     }
-
     render(){
            console.log(this.state.signInData)
     return(
@@ -36,7 +35,6 @@ class SigIn extends React.Component{
             <button className="button" onClick={this.confirmOrder}>Sign In </button>
         </div>
     )}
-
 }
 export default SigIn;
 

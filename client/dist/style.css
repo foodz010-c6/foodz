@@ -1,4 +1,4 @@
-#name{
+/* #name{
  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -31,7 +31,7 @@
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  text-shadow: 2px 2px 5px red;
+  text-shadow: 2px 2px 5px red; */
 }
 .order{
     color: white;
@@ -79,7 +79,7 @@ text-shadow: 2px 2px 5px red;
     border-bottom: 3px double; 
     text-shadow: 2px 2px 5px red;
 }
-.button {
+.button{
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -99,4 +99,20 @@ input[type="checkbox" ] {
     margin: 3px 3px 3px 4px;
     padding: initial;
     border: initial;
+}
+input[type="text"]{
+   width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-shadow: 2px 2px 5px red;
+
+}
+input[type="password"]{
+   width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-shadow: 2px 2px 5px red;
+
 }

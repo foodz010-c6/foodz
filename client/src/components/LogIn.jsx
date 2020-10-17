@@ -35,7 +35,6 @@ class LogIn extends React.Component{
             <button className="button" onClick={this.confirmOrder}>Log In </button>
         </div>
     )}
-
 }
 export default LogIn;
 
